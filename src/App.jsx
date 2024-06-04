@@ -1,27 +1,22 @@
-import './App.css';
+import Topbar from "./components/topbar/Topbar";
+import Intro from "./components/intro/Intro";
+// import Portfolio from "./components/portfolio/Portfolio";
+// import Works from "./components/works/Works";
+// import Testimonials from "./components/testimonials/Testimonials";
+// import Contact from "./components/contact/Contact";
+import "./app.scss"
+import { useState } from "react";
+import Menu from "./components/menu/Menu";
 
-function App() {
+function App() { 
+  const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+    <div className="app">
+       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+       <div class="sections"> 
+        <Intro/> 
+       </div>
     </div>
   );
 }
