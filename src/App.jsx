@@ -14,8 +14,8 @@ function App() {
     <div className="app">
        <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
        <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-       <div class="sections"> 
-        <Intro/> 
+       <div class="sections">
+        <Intro/>       
        </div>
     </div>
   );
