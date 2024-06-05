@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss"
 
@@ -40,7 +40,7 @@ export default function Portfolio(){
                     title={item.title} 
                     active={selected === item.id} 
                     setSelected={setSelected} 
-                    //id={item.id}
+                    id={item.id}
                     />
                 ))}
            </ul>
